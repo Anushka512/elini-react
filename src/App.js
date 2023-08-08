@@ -1,12 +1,15 @@
 import React from "react";
-import Home from "./Home.js"
+import Home from "./Pages/Home/Home.js"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom" ;
 import './App.css';
-import Contact from "./Contact";
-import ErrorPage from "./ErrorPage.js";
+import Contact from "./Pages/Contact/Contact.js";
+import ErrorPage from "./Pages/Error/ErrorPage.js";
+import Navbar from "./Components/Navbar/Navbar.js";
 
 function App() {
   return (
+    <div className="App">
+      <Navbar/>
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -14,7 +17,7 @@ function App() {
         <Route path="*" element={<ErrorPage/>} />
       </Routes>
     </Router>
-    
+    </div>
   );
 }
 
