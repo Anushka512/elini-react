@@ -5,11 +5,9 @@ import './App.css';
 import Contact from "./Pages/Contact/Contact.js";
 import ErrorPage from "./Pages/Error/ErrorPage.js";
 import Navbar from "./Components/Navbar/Navbar.js";
-<<<<<<< HEAD
 import Footer from "./Components/Footer/Footer.js";
-=======
 import ProudctCardPrice from "./Components/ProductCardPrice/ProductCardPrice.js";
->>>>>>> 94662cacf627b32d56edff0db32797c86518b84e
+
 
 function App() {
   return (
@@ -18,14 +16,11 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-<<<<<<< HEAD
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<ErrorPage />} />
-=======
         <Route path="/contact" element={<Contact/>} />
         <Route path="/productcard" element={<ProudctCardPrice/>}/>
         <Route path="*" element={<ErrorPage/>} />
->>>>>>> 94662cacf627b32d56edff0db32797c86518b84e
       </Routes>
 
       <Footer />
