@@ -5,6 +5,7 @@ import {
     AiOutlineUser,
     AiOutlineSearch,
 } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
@@ -58,7 +59,7 @@ const Navbar = () => {
                         <img src={Logo} alt="Logo" />
                     </div>
                     <ul className="app__navbar-links">
-                        <li>Home</li>
+                        <Link to={`/`}>Home</Link>
                         <li>About us</li>
                         <li>Ethnic Wear</li>
                         <li>New Arrivals</li>
@@ -96,7 +97,7 @@ const Navbar = () => {
                             >
                                 <HiX onClick={() => setToggle(false)} />
                                 <ul className='mobile'>
-                                    <li>Home</li>
+                                    <Link to={`/`}>Home</Link>
                                     <li>About us</li>
                                     <li>Ethnic Wear</li>
                                     <li>New Arrivals</li>
