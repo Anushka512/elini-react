@@ -1,0 +1,88 @@
+// .product-card {
+// //   min-height: 50px;
+//   text-align: center;
+//   background-color: #fff8ef;
+//   border-radius: 10px;
+// //   flex-direction: column;
+
+//   h3 {
+//     // font-size: 18px;
+//     text-align: center;
+//     margin-bottom: 10px;
+//   }
+//   p {
+//     font-size: 15px;
+//     text-align: center;
+//     margin-bottom: 15px;
+//     color: #3d3d3c;
+//   }
+// }
+
+
+/* Add your global styles here */
+
+.product-card {
+    position: relative;
+    //   min-height: 50px;
+  text-align: center;
+  background-color: #fff8ef;
+  border-radius: 10px;
+//   flex-direction: column;
+  
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  
+    h3,
+    p {
+      position: absolute;
+      color: white;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      bottom: 0;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  
+    h3 {
+      bottom: 100%;
+      margin-bottom: 5px;
+    }
+  
+    &:hover {
+      h3,
+      p {
+        opacity: 1;
+      }
+    }
+  }
+  
+  /* Styles for Slider container */
+//   .slick-slider {
+//     position: relative;
+//     width: 80%; /* Adjust the width as needed */
+//     // margin: 0 auto;
+//   }
+  
+  .slick-list {
+    overflow: hidden;
+  }
+  
+  .slick-slide {
+    transition: transform 0.3s ease;
+  }
+  
+  /* Center the content within each slide */
+  .slick-slide > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
