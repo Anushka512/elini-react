@@ -1,67 +1,13 @@
 import React from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import img1 from "../../Assets/Images/gallery_img1.png";
 import img2 from "../../Assets/Images/gallery_img2.png";
 import img3 from "../../Assets/Images/gallery_img3.png";
 import img4 from "../../Assets/Images/gallery_img4.png";
 import './Home.scss';
-import ArrowButton from "../../Components/Arrowbutton/ArrowButton";
-
-const products = [
-  {
-    id: 1,
-    name: 'Product 1',
-    description: 'Description for Product 1',
-    image: require('../../Assets/Images/image-box1.png'),
-  },
-  {
-    id: 2,
-    name: 'Product 2',
-    description: 'Description for Product 2',
-    image: require('../../Assets/Images/image-box2.png'),
-  },
-  {
-    id: 3,
-    name: 'Product 3',
-    description: 'Description for Product 3',
-    image: require('../../Assets/Images/image-box3.png'),
-  },
-  {
-    id: 1,
-    name: 'Product 1',
-    description: 'Description for Product 1',
-    image: require('../../Assets/Images/image-box1.png'),
-  },
-  {
-    id: 2,
-    name: 'Product 2',
-    description: 'Description for Product 2',
-    image: require('../../Assets/Images/image-box2.png'),
-  },
-  {
-    id: 3,
-    name: 'Product 3',
-    description: 'Description for Product 3',
-    image: require('../../Assets/Images/image-box3.png'),
-  },
-
-  // Add more products as needed
-];
+import Cards from "../../Components/Cards/Cards";
 
 const Home = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    nextArrow: <ArrowButton type="next" />,
-    prevArrow: <ArrowButton type="prev" />,
-    autoplay: true,
-    autoplaySpeed: 5000,
-  };
+ 
   return (
     <div className='home contain'>
       <div className='upper-gallery'>
@@ -110,15 +56,7 @@ const Home = () => {
           <h2>Forever Clothing</h2>
           <p>Trousseau must-haves we're currently loving</p>
         </div>
-        <Slider {...settings}>
-          {products.map(product => (
-            <div key={product.id} className="product-card">
-              <img src={product.image} alt={product.name} />
-              <h3>{product.name}</h3>
-              <p>{product.description}</p>
-            </div>
-          ))}
-        </Slider>
+          <Cards/>
       </section>
     </div>
   );
