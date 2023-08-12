@@ -1,9 +1,14 @@
 .footer {
   background-color: #e8e4df;
   color: #000000;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px 0px;
+  flex-direction: column;
 
-  .footer-line1{
+  .footer-line{
+    max-width: 1000px;
     ul{
         display:flex;
         gap: 10px 20px;
@@ -14,25 +19,12 @@
     }
   }
 
-  .footers-line2{
-    ul{
-        margin-top: -20px;
-        display:flex;
-        gap: 10px 20px;
-        justify-content: center;
-        font-family: "Montserrat";
-        font-size: 14px;
-        flex-wrap: wrap;
-    }
-  }
 
   .social-icons {
     display: flex;
     justify-content: center;
     gap: 20px 30px;
-    padding-bottom: 20px;
-    // padding: 10px;
-
+   
     .icon {
       font-size: 20px;
       color: #000000;
