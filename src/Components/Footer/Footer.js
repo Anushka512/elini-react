@@ -12,7 +12,7 @@ import {
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-line">
+      <div className="footer-line1">
         <ul>
             <p>Support</p>
             <p>Company</p>
@@ -25,7 +25,7 @@ const Footer = () => {
             <p>Careers</p>
         </ul>
       </div>
-      <div className="footers-line">
+      <div className="footers-line2">
       <ul>
             <p>Sitemap</p>
             <p>Store Locator</p>
