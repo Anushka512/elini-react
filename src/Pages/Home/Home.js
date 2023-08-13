@@ -5,58 +5,81 @@ import img3 from "../../Assets/Images/gallery_img3.png";
 import img4 from "../../Assets/Images/gallery_img4.png";
 import './Home.scss';
 import Cards from "../../Components/Cards/Cards";
+import Catcircle from '../../Components/Catcircle/Catcircle';
 
 const Home = () => {
- 
-  return (
-    <div className='home contain'>
-      <div className='upper-gallery'>
-        <div className='gallery-card1'>
-          <div className='image-container'>
-            <img src={img1} alt="Image 1" />
-            <div className='overlay'>
-              <p>ORDER NOW</p>
-              <h2>On Discount</h2>
-            </div>
-          </div>
-        </div>
-        <div className='gallery-card2'>
-          <div className='image-container'>
-            <img src={img2} alt="Image 2" />
-            <div className='overlay'>
-              <p>FRESHLY CRAFTED</p>
-              <h2>Latest Arrivals</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className='lower-gallery'>
-        <div className='gallery-card2'>
-          <div className='image-container'>
-            <img src={img3} alt="Image 3" />
-            <div className='overlay'>
-              <p>DAZZLE IT UP</p>
-              <h2>Best Sellers</h2>
-            </div>
-          </div>
-        </div>
-        <div className='gallery-card1'>
-          <div className='image-container'>
-            <img src={img4} alt="Image 4" />
-            <div className='overlay'>
-              <p>JUST FOR YOU</p>
-              <h2>First Time On Sale</h2>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <section className="product-slider">
-        <div className="slider-heading">
-          <h2>Forever Clothing</h2>
-          <p>Trousseau must-haves we're currently loving</p>
+  return (
+    <div className='homePage'>
+      <section className='dress-cat contain'>
+        <Catcircle />
+      </section>
+
+      {/* Choosing Elini! */}
+      <section className='ch-elini contain contain-bg'>
+        <h2 className='sec-head sec-head-ul'>
+          Choosing Elini!
+        </h2>
+        <p className='sec-para'>
+          Elini is a luxury brand which was born in the India, a land symbolizing opulence and exceptional
+          class. We produce fashion items using original craftsmanship, vibrant prints, and out-of-the-
+          ordinary meticulousness. The label was founded by Lila Achimu and is driven by her love and
+          passion for both Japanese and Oriental art and culture. Kimaya introduces to the market an array
+          of unique designs, for the elegant woman seeking the extraordinary!
+        </p>
+      </section>
+
+      {/* Fashion gallery  */}
+      <section className='home-gallery contain'>
+        <div className='upper-gallery'>
+          <div className='gallery-card1'>
+            <div className='image-container'>
+              <img src={img1} alt="HomeGallery" />
+              <div className='overlay'>
+                <p>ORDER NOW</p>
+                <h2>On Discount</h2>
+              </div>
+            </div>
+          </div>
+          <div className='gallery-card2'>
+            <div className='image-container'>
+              <img src={img2} alt="HomeGallery" />
+              <div className='overlay'>
+                <p>FRESHLY CRAFTED</p>
+                <h2>Latest Arrivals</h2>
+              </div>
+            </div>
+          </div>
         </div>
-          <Cards/>
+        <div className='lower-gallery'>
+          <div className='gallery-card2'>
+            <div className='image-container'>
+              <img src={img3} alt="HomeGallery" />
+              <div className='overlay'>
+                <p>DAZZLE IT UP</p>
+                <h2>Best Sellers</h2>
+              </div>
+            </div>
+          </div>
+          <div className='gallery-card1'>
+            <div className='image-container'>
+              <img src={img4} alt="HomeGallery" />
+              <div className='overlay'>
+                <p>JUST FOR YOU</p>
+                <h2>First Time On Sale</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Slider  */}
+      <section className="product-slider contain">
+        <div className="slider-heading">
+          <h2 className='sec-head'>Forever Clothing</h2>
+          <p className='sec-para'>Trousseau must-haves we're currently loving</p>
+        </div>
+        <Cards />
       </section>
     </div>
   );
