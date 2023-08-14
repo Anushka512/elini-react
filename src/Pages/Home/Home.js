@@ -6,6 +6,7 @@ import img4 from "../../Assets/Images/gallery_img4.png";
 import './Home.scss';
 import Cards from "../../Components/Cards/Cards";
 import Catcircle from '../../Components/Catcircle/Catcircle';
+import ProductCardPrice from '../../Components/ProductCardPrice/ProductCardPrice'
 
 const Home = () => {
 
@@ -71,6 +72,20 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className='contain contain-bg product-wrapper'>
+        <div className='pr-wrapper-header'>
+          <h2 className='sec-head'>Popular Styles</h2>
+          <p className='sec-para'>View all</p>
+        </div>
+        <div className='pr-wrapper-btnbox'>
+          <div className='pr-btn active'>All</div>
+          <div className='pr-btn'>Kurti</div>
+          <div className='pr-btn'>Kurti</div>
+          <div className='pr-btn'>Kurti</div>
+        </div>
+        <ProductCardPrice />
       </section>
 
       {/* Product Slider  */}

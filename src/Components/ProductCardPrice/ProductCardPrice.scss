@@ -1,3 +1,49 @@
-.pc-price{
-    border: 1px solid black;
+.pc-price {
+    .pc-price-img {
+        
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+    }
+
+    .pc-price-footer{
+        padding: 10px 5px;
+        p{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+        }
+        .pc-price-name{
+            font-weight: bolder;
+            color: #4D4D4D;
+        }
+        .pc-price-title{
+            font-weight: 400;
+            margin-bottom: 4px;
+        }
+        .pc-price-price{
+            font-weight: 400;
+            color: #4D4D4D;
+        }
+    }
+
 }
+
+
+.slick-list {
+    overflow: hidden;
+  }
+  
+  .slick-slide {
+    transition: transform 0.3s ease;
+  }
+  
+  /* Center the content within each slide */
+  .slick-slide > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
