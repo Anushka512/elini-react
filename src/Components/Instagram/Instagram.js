@@ -3,51 +3,50 @@ import ArrowButton from "../Arrowbutton/ArrowButton";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import "./ProductCardPrice.scss"
-// import product from '../../Assets/Images/product.png';
+import "../ProductCardPrice/ProductCardPrice.scss";
 
 const products = [
   {
     id: 1,
     name: 'Product 1',
     title: 'Description for Product 1',
-    price: "999",
-    image: require('../../Assets/Images/product_1.png'),
+    shop: "Shop Now",
+    image: require('../../Assets/Images/Insta-1.png'),
   },
   {
     id: 2,
     name: 'Product 2',
     title: 'Description for Product 2',
-    price: "999",
-    image: require('../../Assets/Images/product_2.png'),
+    shop: "Shop Now",
+    image: require('../../Assets/Images/Insta-2.png'),
   },
   {
     id: 3,
     name: 'Product 3',
     title: 'Description for Product 3',
-    price: "999",
-    image: require('../../Assets/Images/product_3.png'),
+    shop: "Shop Now",
+    image: require('../../Assets/Images/Insta-3.png'),
   },
   {
     id: 4,
     name: 'Product 4',
     title: 'Description for Product 4',
-    price: "999",
-    image: require('../../Assets/Images/product_4.png'),
+    shop: "Shop Now",
+    image: require('../../Assets/Images/Insta-4.png'),
   },
   {
     id: 5,
     name: 'Product 5',
     title: 'Description for Product 5',
-    price: "999",
-    image: require('../../Assets/Images/product_1.png'),
+    shop: "Shop Now",
+    image: require('../../Assets/Images/Insta-5.png'),
   },
   {
     id: 6,
     name: 'Product 6',
     title: 'Description for Product 6',
-    price: "999",
-    image: require('../../Assets/Images/product_2.png'),
+    shop: "Shop Now",
+    image: require('../../Assets/Images/Insta-1.png'),
   },
   // Add more products as needed
 ];
@@ -57,8 +56,8 @@ function ProdcuctCardPrice() {
     dots: true,
     infinite: true,
     speed: 600,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 5,
+    slidesToScroll: 5,
     nextArrow: <ArrowButton type="next" />,
     prevArrow: <ArrowButton type="prev" />,
     autoplay: true,
@@ -74,7 +73,7 @@ function ProdcuctCardPrice() {
           <div className='pc-price-footer'>
             <p className='pc-price-name'>{product.name}</p>
             <p className='pc-price-title'>{product.title}</p>
-            <p className='pc-price-price'>₹{product.price}</p>
+            <p className='pc-price-price'>{product.shop}</p>
           </div>
         </div>
       ))}
