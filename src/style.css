@@ -12,6 +12,7 @@
 
 :root{
   --pr-black: #423F3F;
+  --black-head : #1e1e1e;
   --fade-yl: #f4f3ef;
 }
 
@@ -42,7 +43,7 @@ code {
   font-family: 'Crimson Pro', serif;
   font-weight: 400;
   text-align: center;
-  color: var(--pr-black);
+  color: var(--black-head);
   margin-bottom: 5px;
   
 }
@@ -66,5 +67,5 @@ code {
   font-size: 16px;
   color: var(--pr-black);
   font-family: 'Montserrat', sans-serif; 
-  line-height: 22px;
+  line-height: 40px;
 }

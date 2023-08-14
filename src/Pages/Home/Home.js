@@ -4,11 +4,45 @@ import img2 from "../../Assets/Images/gallery_img2.png";
 import img3 from "../../Assets/Images/gallery_img3.png";
 import img4 from "../../Assets/Images/gallery_img4.png";
 import './Home.scss';
+import Slider from 'react-slick';
+// import 'slick-carousel/slick/slick.css';
+// import 'slick-carousel/slick/slick-theme.css';
 import Cards from "../../Components/Cards/Cards";
+import Subscribe from "../../Components/Subscribe/Subscribe";
+import ArrowButton from "../../Components/Arrowbutton/ArrowButton";
+import Stars from "../../Assets/Images/Star.png";
 import Catcircle from '../../Components/Catcircle/Catcircle';
-import ProductCardPrice from '../../Components/ProductCardPrice/ProductCardPrice'
+import ProductCardPrice from '../../Components/ProductCardPrice/ProductCardPrice';
+import ShopInstagram from "../../Components/Instagram/Instagram";
+import v1 from "../../Assets/Images/Vector-1.png";
+import v2 from "../../Assets/Images/Vector-2.png";
+import v3 from "../../Assets/Images/Vector-3.png";
+import v4 from "../../Assets/Images/Vector-4.png";
+
 
 const Home = () => {
+  const testimonials = [
+    { name: 'Carla Finch', content: 'I purchased a Long Sleeve Kimono out of my love of Japanese culture and it turned out really amazing.The delivery and tracking were also seamless.Absolutely love Elini! ', title: 'Vibrant Collection' },
+    { name: 'Zahra Amin', content: 'My sister suggested Elini to me for my birthday outfit. Opted for one of their trendy jumpsuits and was not disappointed. 10 out of 10 - highly recommended.', title: 'Vibrant Collection' },
+    { name: 'Carla Finch', content: 'I purchased a Long Sleeve Kimono out of my love of Japanese culture and it turned out really amazing.The delivery and tracking were also seamless.Absolutely love Elini! ', title: 'Vibrant Collection' },
+    { name: 'Zahra Amin', content: 'My sister suggested Elini to me for my birthday outfit. Opted for one of their trendy jumpsuits and was not disappointed. 10 out of 10 - highly recommended.', title: 'Vibrant Collection' },
+    { name: 'Carla Finch', content: 'I purchased a Long Sleeve Kimono out of my love of Japanese culture and it turned out really amazing.The delivery and tracking were also seamless.Absolutely love Elini! ', title: 'Vibrant Collection' },
+    { name: 'Zahra Amin', content: 'My sister suggested Elini to me for my birthday outfit. Opted for one of their trendy jumpsuits and was not disappointed. 10 out of 10 - highly recommended.', title: 'Vibrant Collection' },
+    { name: 'Carla Finch', content: 'I purchased a Long Sleeve Kimono out of my love of Japanese culture and it turned out really amazing.The delivery and tracking were also seamless.Absolutely love Elini! ', title: 'Vibrant Collection' },
+    { name: 'Zahra Amin', content: 'My sister suggested Elini to me for my birthday outfit. Opted for one of their trendy jumpsuits and was not disappointed. 10 out of 10 - highly recommended.', title: 'Vibrant Collection' },
+    // Add more testimonials
+  ];
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    nextArrow: <ArrowButton type="next" />,
+    prevArrow: <ArrowButton type="prev" />,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  };
 
   return (
     <div className='homePage'>
@@ -89,13 +123,70 @@ const Home = () => {
       </section>
 
       {/* Product Slider  */}
-      <section className="product-slider contain">
+      <section className="product-slider contain  contain-bg">
         <div className="slider-heading">
           <h2 className='sec-head'>Forever Clothing</h2>
           <p className='sec-para'>Trousseau must-haves we're currently loving</p>
         </div>
         <Cards />
       </section>
+
+      <section className="product-slider contain contain-bg">
+        <div className="slider-heading">
+          <h2 className='sec-head'>Effortless Clothing</h2>
+          <p className='sec-para'>Trousseau must-haves we're currently loving</p>
+        </div>
+        <Cards />
+      </section>
+
+      <section className='product-wrapper contain contain-bg '>
+        <div className='pr-wrapper-header'>
+          <h2 className='sec-head'>Shop Instagram</h2>
+          <p className='sec-para'>View all</p>
+        </div>
+        <ShopInstagram/>
+      </section>
+
+      <div className="contain-bg section contain">
+        <div className="item">
+          <img src={v1} alt="v1" />
+          <h2>Free delivery</h2>
+          <p>on orders above ₹999</p>
+        </div>
+        <div className="divider"></div>
+        <div className="item">
+          <img src={v2} alt="v2" />
+          <h2>Delivery on time</h2>
+          <p>Lorem Ipsum lorem ipsum de color</p>
+        </div>
+        <div className="divider"></div>
+        <div className="item">
+          <img src={v3} alt="v3" />
+          <h2>Secure payment</h2>
+          <p>100% secure payment assurity</p>
+        </div>
+        <div className="divider"></div>
+        <div className="item">
+          <img src={v4} alt="v4" />
+          <h2>Online support</h2>
+          <p>Online support 24/7</p>
+        </div>
+      </div>
+
+      <div className="testimonials-slider contain">
+        <h2 className="sec-head">Customer's Love</h2>
+        <Slider {...settings}>
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="testimonial">
+              <img className="stars" src={Stars} alt="RatingStart" />
+              <h3 className="title">{testimonial.title}</h3>
+              <p className="content">{testimonial.content}</p>
+              <p className="name">{testimonial.name}</p>
+            </div>
+          ))}
+        </Slider>
+      </div>
+      <Subscribe />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 .homePage {
   min-height: 100vh;
 
-  .dress-cat{
+  .dress-cat {
     padding-top: 20px !important;
     padding-bottom: 20px !important;
     display: flex;
@@ -10,8 +10,8 @@
     gap: 10px 20px;
   }
 
-  .ch-elini{
-    .sec-para{
+  .ch-elini {
+    .sec-para {
       text-align: center;
       max-width: 777px;
       margin: 0px auto;
@@ -20,12 +20,11 @@
   }
 
   .home-gallery {
-
     .upper-gallery,
     .lower-gallery {
       display: flex;
-      gap: 20px 0px;
-      // flex-direction: column;
+      flex-wrap: wrap;
+      gap: 20px 20px;
       justify-content: space-between;
       align-items: center;
       margin: 20px 0;
@@ -39,8 +38,8 @@
           max-width: 100%;
 
           img {
-            width: 450px;
-            height: 300px;
+            width: 590px;
+            height: 320px;
             object-fit: cover;
             flex-wrap: wrap;
           }
@@ -83,8 +82,8 @@
           max-width: 100%;
 
           img {
-            width: 650px;
-            height: 300px;
+            width: 800px;
+            height: 320px;
             object-fit: cover;
             flex-wrap: wrap;
           }
@@ -120,7 +119,6 @@
     }
 
     @media screen and (max-width: 768px) {
-
       .upper-gallery,
       .lower-gallery {
         flex-direction: column;
@@ -133,38 +131,36 @@
     }
   }
 
-  .product-wrapper{
+  .product-wrapper {
     padding: 40px;
-    .pr-wrapper-header{
+    .pr-wrapper-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       // border-bottom: 1px solid black;
     }
-    .pr-wrapper-btnbox{
+    .pr-wrapper-btnbox {
       display: flex;
       justify-content: flex-start;
       align-items: center;
       padding: 20px 0px;
       gap: 0px 20px;
-      ;
-
-      .pr-btn{
+      
+      .pr-btn {
         padding: 6px 15px;
         border: 2px solid #333333;
         border-radius: 30px;
         color: #333333;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
       }
-      .pr-btn.active{
-        background-color:#000;
+      .pr-btn.active {
+        background-color: #000;
         color: white;
       }
     }
   }
 
   .product-slider {
-    padding: 40px;
     text-align: center;
 
     .slider-heading {
@@ -194,12 +190,12 @@
         p {
           margin-top: 5px;
           font-size: 14px;
-          color: #888;
+          color: #ffffff;
         }
       }
 
       .slick-dots {
-        bottom: -20px;
+        bottom: -30px;
       }
     }
 
@@ -212,4 +208,121 @@
     }
   }
 
+  // 4 support section
+
+  .section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex-basis: 24%;
+
+      @media (max-width: 768px) {
+        margin-bottom: 20px;
+        flex-basis: 100%;
+      }
+
+      h2 {
+        padding: 10px;
+        font-family: "Montserrat";
+      }
+
+      p {
+        font-size: 15px;
+        color: #666;
+      }
+    }
+
+    .divider {
+      width: 2px;
+      height: 100px;
+      background-color: #ccc;
+      margin: 0 20px;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  // Testimonials
+
+  .testimonials-slider {
+    text-align: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    // gap: 30px 30px;
+
+    .testimonial {
+      background-color: #f4f4f4;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      justify-content: center;
+      text-align: center;
+      flex-wrap: wrap;
+      gap: 30px 30px;
+      margin: 20px;
+
+      .stars {
+        display: inline;
+      }
+
+      .title {
+        font-weight: bold;
+      }
+
+      .content {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      .name {
+        font-weight: bold;
+        font-size: 15px;
+      }
+    }
+
+    .slick-slider {
+      .slick-slide {
+        padding: 0 10px;
+        transition: opacity 0.3s;
+
+        h3 {
+          margin-top: 10px;
+          font-size: 18px;
+        }
+
+        p {
+          margin-top: 5px;
+          font-size: 14px;
+          color: #000000;
+        }
+      }
+    }
+
+    /* Styling for react-slick dots */
+    .slick-dots {
+      li {
+        button:before {
+          color: #666;
+        }
+      }
+      li.slick-active {
+        button:before {
+          color: #007bff;
+        }
+      }
+    }
+  }
 }
