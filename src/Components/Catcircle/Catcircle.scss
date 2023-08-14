@@ -1,0 +1,15 @@
+.cat-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .cr{
+        display: flex;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #ECF5BB;
+        border: 2px solid #808080;
+    }
+}
