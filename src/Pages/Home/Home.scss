@@ -213,15 +213,20 @@
 
   .section-container {
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 
-    @media (min-width: 768px) {
-      flex-direction: row;
-    }
+    // @media (min-width: 768px) {
+    //   flex-direction: row;
+    // }
 
     .left-section {
       padding: 20px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start;
 
       p {
         font-size: 16px;
@@ -238,8 +243,6 @@
     }
 
     .right-section {
-      display: flex;
-      overflow-x: auto;
       padding: 20px;
       background-color: #f0f0f0;
     }
@@ -247,7 +250,7 @@
 
   // 4 support section
 
-  .section {
+  .detailsection {
     display: flex;
     align-items: center;
     justify-content: space-between;

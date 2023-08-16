@@ -17,8 +17,8 @@ const Navbar = () => {
 
     const [toggle, setToggle] = useState(false);
     return (
-        <div className="wrapper__nav">
-            <div className="top__nav">
+        <div className="wrapper__nav ">
+            <div className="top__nav nav-contain">
                 <div className="social__icon">
                     <a href="/"
                         target="_blank"
@@ -50,10 +50,10 @@ const Navbar = () => {
 
                 </div>
                 <p className="header-sale">
-                    20% off on orders above ₹3999.Valid until 20th Sept.
+                    Use RAKHI50 for FLAT 50% OFF
                 </p>
             </div>
-            <nav className="navbar-items">
+            <nav className="navbar-items nav-contain">
                 <div className="container nav__container">
                     <div className="logo">
                         <img src={Logo} alt="Logo" />

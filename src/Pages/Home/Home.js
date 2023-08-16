@@ -152,7 +152,7 @@ const Home = () => {
       <div className="about__banner contain">
         <div className="ab-left">
           <h3 className="head sec-para">ELINI DESIGN</h3>
-          <h3 className="head-sec sec-head sec-head-ul">Not Just Clothing But An Art Form</h3>
+          <h3 className="head-sec sec-head">Not Just Clothing But An Art Form</h3>
           <p className="p-text sec-para">
             Kimaya, a portmanteau for Kimono and Abaya is not merely a clothing brand
             but the fusion of two cultures flourishing miles apart geographically. Our
@@ -196,7 +196,7 @@ const Home = () => {
           <button>Shop All</button>
         </div>
         <div className="right-section">
-
+          <Cards />
         </div>
       </section>
 
@@ -208,7 +208,7 @@ const Home = () => {
         <ShopInstagram />
       </section>
 
-      <div className="contain-bg section contain">
+      <div className=" detailsection  contain contain-bg">
         <div className="item">
           <img src={v1} alt="v1" />
           <h2>Free delivery</h2>

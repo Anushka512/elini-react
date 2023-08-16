@@ -46,6 +46,9 @@ code {
 .contain{
   padding: 70px 50px;
 }
+.nav-contain{
+  padding: 0px 50px;
+}
 .contain-bg{
   background: var(--fade-yl);
 }
