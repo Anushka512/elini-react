@@ -25,6 +25,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out 0.1s;
+  outline: 0 !important;
+  color: var(---heading-color);
+  cursor: pointer;
+}
+
+a:hover{
+  font-weight: 500;
+  color: #4d1f00;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -67,5 +80,5 @@ code {
   font-size: 16px;
   color: var(--pr-black);
   font-family: 'Montserrat', sans-serif; 
-  line-height: 40px;
+  line-height: 30px;
 }

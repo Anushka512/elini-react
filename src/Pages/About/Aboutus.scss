@@ -1,0 +1,149 @@
+.about {
+  //   min-height: 100vh;
+  .banner {
+    .hero__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .ch-elini {
+    .sec-para {
+      text-align: center;
+      max-width: 777px;
+      margin: 0px auto;
+      margin-top: 30px;
+
+      span {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .about__banner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 30px;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+    .ab-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 50%;
+
+      span {
+        margin-top: 30px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px 30px;
+
+        .btn {
+          background-color: #231918;
+          // border: 1px solid #000000;
+          padding: 12px;
+          border-radius: 5px;
+          color: #ffffff;
+        }
+      }
+    }
+
+    .ab-right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      img {
+        width: 500px;
+      }
+    }
+  }
+}
+
+@media (max-width: 867px) {
+  .about {
+    .about__banner {
+      .ab-left {
+        width: 100%;
+
+        .btn {
+          font-size: 15px !important;
+        }
+      }
+
+      .ab-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 868px) and (max-width: 1068px) {
+  .about {
+    .about__banner {
+      .ab-left {
+        width: 100%;
+
+        .btn {
+          font-size: 15px !important;
+        }
+      }
+
+      .ab-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 868px) and (max-width: 1168px) {
+  .about {
+    .about__banner {
+      flex-wrap: nowrap;
+      .ab-left {
+        width: 100%;
+
+        .btn {
+          font-size: 15px !important;
+        }
+      }
+
+      .ab-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

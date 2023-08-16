@@ -60,11 +60,11 @@ const Navbar = () => {
                     </div>
                     <ul className="app__navbar-links">
                         <Link to={`/`}>Home</Link>
-                        <li>About us</li>
+                        <Link to={`/about`}>About us</Link>
                         <li>Ethnic Wear</li>
                         <li>New Arrivals</li>
-                        <li>Reach Us</li>
                         <li>Store Locator</li>
+                        <Link to={`/contactus`}>Reach Us</Link>
 
                     </ul>
                     <div className="right">
@@ -101,8 +101,9 @@ const Navbar = () => {
                                     <li>About us</li>
                                     <li>Ethnic Wear</li>
                                     <li>New Arrivals</li>
-                                    <li>Reach Us</li>
                                     <li>Store Locator</li>
+                                    <li>Reach Us</li>
+                                    
                                 </ul>
                             </motion.div>
                         )}

@@ -4,6 +4,7 @@ import img2 from "../../Assets/Images/gallery_img2.png";
 import img3 from "../../Assets/Images/gallery_img3.png";
 import img4 from "../../Assets/Images/gallery_img4.png";
 import './Home.scss';
+import { Link } from "react-router-dom";
 import Slider from 'react-slick';
 // import 'slick-carousel/slick/slick.css';
 // import 'slick-carousel/slick/slick-theme.css';
@@ -18,6 +19,7 @@ import v1 from "../../Assets/Images/Vector-1.png";
 import v2 from "../../Assets/Images/Vector-2.png";
 import v3 from "../../Assets/Images/Vector-3.png";
 import v4 from "../../Assets/Images/Vector-4.png";
+import Right from "../../Assets/Images/home-right.png"
 
 
 const Home = () => {
@@ -32,6 +34,31 @@ const Home = () => {
     { name: 'Zahra Amin', content: 'My sister suggested Elini to me for my birthday outfit. Opted for one of their trendy jumpsuits and was not disappointed. 10 out of 10 - highly recommended.', title: 'Vibrant Collection' },
     // Add more testimonials
   ];
+
+  const products = [
+    {
+      name: 'Product 1',
+      description: 'Description for Product 1',
+      image: require('../../Assets/Images/image-box1.png'),
+    },
+    {
+      name: 'Product 2',
+      description: 'Description for Product 2',
+      image: require('../../Assets/Images/image-box2.png'),
+    },
+    {
+      name: 'Product 2',
+      description: 'Description for Product 2',
+      image: require('../../Assets/Images/image-box3.png'),
+    },
+    {
+      name: 'Product 2',
+      description: 'Description for Product 2',
+      image: require('../../Assets/Images/image-box1.png'),
+    },
+    // Add more products as needed
+  ];
+
   const settings = {
     dots: true,
     infinite: true,
@@ -122,6 +149,29 @@ const Home = () => {
         <ProductCardPrice />
       </section>
 
+      <div className="about__banner contain">
+        <div className="ab-left">
+          <h3 className="head sec-para">ELINI DESIGN</h3>
+          <h3 className="head-sec sec-head sec-head-ul">Not Just Clothing But An Art Form</h3>
+          <p className="p-text sec-para">
+            Kimaya, a portmanteau for Kimono and Abaya is not merely a clothing brand
+            but the fusion of two cultures flourishing miles apart geographically. Our
+            products are made to emphasize your confidence, elegance and simplicity, by
+            bringing your stylish imagination to life. We aim to adorn our customers like we
+            do to ourselves and allow them to showcase the liberty in their styles and
+            personalities.
+          </p>
+          <span>
+            <Link to="/contact" className="btn">
+              Shop All
+            </Link>
+          </span>
+        </div>
+        <span className="ab-right">
+          <img src={Right} alt="aboutbanner" />
+        </span>
+      </div>
+
       {/* Product Slider  */}
       <section className="product-slider contain  contain-bg">
         <div className="slider-heading">
@@ -139,12 +189,23 @@ const Home = () => {
         <Cards />
       </section>
 
+      <section className="section-container contain contain-bg">
+        <div className="left-section">
+          <h2 className='sec-head'>Favourites of the week</h2>
+          <p className='sec-para'>Trousseau must-haves we're currently loving</p>
+          <button>Shop All</button>
+        </div>
+        <div className="right-section">
+
+        </div>
+      </section>
+
       <section className='product-wrapper contain contain-bg '>
         <div className='pr-wrapper-header'>
           <h2 className='sec-head'>Shop Instagram</h2>
           <p className='sec-para'>View all</p>
         </div>
-        <ShopInstagram/>
+        <ShopInstagram />
       </section>
 
       <div className="contain-bg section contain">
