@@ -6,8 +6,8 @@ import Contact from "./Pages/Contact/Contact.js";
 import ErrorPage from "./Pages/Error/ErrorPage.js";
 import Navbar from "./Components/Navbar/Navbar.js";
 import Footer from "./Components/Footer/Footer.js";
+import About from "./Pages/About/Aboutus";
 import ProudctCardPrice from "./Components/ProductCardPrice/ProductCardPrice.js";
-
 
 function App() {
   return (
@@ -16,11 +16,10 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
         <Route path="*" element={<ErrorPage />} />
-        <Route path="/contact" element={<Contact/>} />
+        <Route path="/contactus" element={<Contact/>} />
         <Route path="/productcard" element={<ProudctCardPrice/>}/>
-        <Route path="*" element={<ErrorPage/>} />
       </Routes>
 
       <Footer />
