@@ -8,6 +8,7 @@ import Navbar from "./Components/Navbar/Navbar.js";
 import Footer from "./Components/Footer/Footer.js";
 import About from "./Pages/About/Aboutus";
 import ProudctCardPrice from "./Components/ProductCardPrice/ProductCardPrice.js";
+import Ethnic from "./Pages/EthnicWear/EthnicWear";
 
 function App() {
   return (
@@ -17,9 +18,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/ethnicwear" element={<Ethnic />} />
         <Route path="*" element={<ErrorPage />} />
         <Route path="/contactus" element={<Contact/>} />
         <Route path="/productcard" element={<ProudctCardPrice/>}/>
+
       </Routes>
 
       <Footer />

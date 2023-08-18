@@ -5,13 +5,8 @@ import img3 from "../../Assets/Images/gallery_img3.png";
 import img4 from "../../Assets/Images/gallery_img4.png";
 import './Home.scss';
 import { Link } from "react-router-dom";
-import Slider from 'react-slick';
-// import 'slick-carousel/slick/slick.css';
-// import 'slick-carousel/slick/slick-theme.css';
 import Cards from "../../Components/Cards/Cards";
 import Subscribe from "../../Components/Subscribe/Subscribe";
-import ArrowButton from "../../Components/Arrowbutton/ArrowButton";
-import Stars from "../../Assets/Images/Star.png";
 import Catcircle from '../../Components/Catcircle/Catcircle';
 import ProductCardPrice from '../../Components/ProductCardPrice/ProductCardPrice';
 import ShopInstagram from "../../Components/Instagram/Instagram";
@@ -19,58 +14,11 @@ import v1 from "../../Assets/Images/Vector-1.png";
 import v2 from "../../Assets/Images/Vector-2.png";
 import v3 from "../../Assets/Images/Vector-3.png";
 import v4 from "../../Assets/Images/Vector-4.png";
-import Right from "../../Assets/Images/home-right.png"
-
+import Right from "../../Assets/Images/home-right.png";
+import CardRight from "../../Components/Cards-Right/Card_Right";
+import TestimonialCard from "../../Components/TestimonialCard/TestimonialCard";
 
 const Home = () => {
-  const testimonials = [
-    { name: 'Carla Finch', content: 'I purchased a Long Sleeve Kimono out of my love of Japanese culture and it turned out really amazing.The delivery and tracking were also seamless.Absolutely love Elini! ', title: 'Vibrant Collection' },
-    { name: 'Zahra Amin', content: 'My sister suggested Elini to me for my birthday outfit. Opted for one of their trendy jumpsuits and was not disappointed. 10 out of 10 - highly recommended.', title: 'Vibrant Collection' },
-    { name: 'Carla Finch', content: 'I purchased a Long Sleeve Kimono out of my love of Japanese culture and it turned out really amazing.The delivery and tracking were also seamless.Absolutely love Elini! ', title: 'Vibrant Collection' },
-    { name: 'Zahra Amin', content: 'My sister suggested Elini to me for my birthday outfit. Opted for one of their trendy jumpsuits and was not disappointed. 10 out of 10 - highly recommended.', title: 'Vibrant Collection' },
-    { name: 'Carla Finch', content: 'I purchased a Long Sleeve Kimono out of my love of Japanese culture and it turned out really amazing.The delivery and tracking were also seamless.Absolutely love Elini! ', title: 'Vibrant Collection' },
-    { name: 'Zahra Amin', content: 'My sister suggested Elini to me for my birthday outfit. Opted for one of their trendy jumpsuits and was not disappointed. 10 out of 10 - highly recommended.', title: 'Vibrant Collection' },
-    { name: 'Carla Finch', content: 'I purchased a Long Sleeve Kimono out of my love of Japanese culture and it turned out really amazing.The delivery and tracking were also seamless.Absolutely love Elini! ', title: 'Vibrant Collection' },
-    { name: 'Zahra Amin', content: 'My sister suggested Elini to me for my birthday outfit. Opted for one of their trendy jumpsuits and was not disappointed. 10 out of 10 - highly recommended.', title: 'Vibrant Collection' },
-    // Add more testimonials
-  ];
-
-  const products = [
-    {
-      name: 'Product 1',
-      description: 'Description for Product 1',
-      image: require('../../Assets/Images/image-box1.png'),
-    },
-    {
-      name: 'Product 2',
-      description: 'Description for Product 2',
-      image: require('../../Assets/Images/image-box2.png'),
-    },
-    {
-      name: 'Product 2',
-      description: 'Description for Product 2',
-      image: require('../../Assets/Images/image-box3.png'),
-    },
-    {
-      name: 'Product 2',
-      description: 'Description for Product 2',
-      image: require('../../Assets/Images/image-box1.png'),
-    },
-    // Add more products as needed
-  ];
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    nextArrow: <ArrowButton type="next" />,
-    prevArrow: <ArrowButton type="prev" />,
-    autoplay: true,
-    autoplaySpeed: 5000,
-  };
-
   return (
     <div className='homePage'>
       <section className='dress-cat contain'>
@@ -181,6 +129,7 @@ const Home = () => {
         <Cards />
       </section>
 
+      {/* Product Slider  */}
       <section className="product-slider contain contain-bg">
         <div className="slider-heading">
           <h2 className='sec-head'>Effortless Clothing</h2>
@@ -189,14 +138,15 @@ const Home = () => {
         <Cards />
       </section>
 
-      <section className="section-container contain contain-bg">
+      {/* Fav of the week  */}
+      <section className="section-container contain contain-bg" >
         <div className="left-section">
           <h2 className='sec-head'>Favourites of the week</h2>
           <p className='sec-para'>Trousseau must-haves we're currently loving</p>
           <button>Shop All</button>
         </div>
-        <div className="right-section">
-          <Cards />
+        <div className="right-section ">
+          <CardRight />
         </div>
       </section>
 
@@ -233,20 +183,9 @@ const Home = () => {
           <p>Online support 24/7</p>
         </div>
       </div>
-
-      <div className="testimonials-slider contain">
-        <h2 className="sec-head">Customer's Love</h2>
-        <Slider {...settings}>
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="testimonial">
-              <img className="stars" src={Stars} alt="RatingStart" />
-              <h3 className="title">{testimonial.title}</h3>
-              <p className="content">{testimonial.content}</p>
-              <p className="name">{testimonial.name}</p>
-            </div>
-          ))}
-        </Slider>
-      </div>
+      {/* customer's love  */}
+      <TestimonialCard />
+      {/* Subscribe  */}
       <Subscribe />
     </div>
   );

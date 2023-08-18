@@ -1,24 +1,68 @@
-.testimonial__card {
-  min-height: 300px;
+.testimonials-slider {
   text-align: center;
-  background-color: rgb(230, 230, 230);
-  background-color: #fff8ef;
-  border-radius: 10px;
-  flex-direction: column;
-  padding: 20px !important;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  // gap: 30px 30px;
 
-  .stars {
-    width: 100px;
-  }
-  .name {
-    font-size: 18px;
+  .testimonial {
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: center;
     text-align: center;
-    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 30px 30px;
+    margin: 20px;
+
+    .stars {
+      display: inline;
+    }
+
+    .title {
+      font-weight: bold;
+    }
+
+    .content {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-weight: bold;
+      font-size: 15px;
+    }
   }
-  .p-text {
-    font-size: 15px;
-    text-align: center;
-    margin-bottom: 15px;
-    color: #3d3d3c;
+
+  .slick-slider {
+    .slick-slide {
+      padding: 0 10px;
+      transition: opacity 0.3s;
+
+      h3 {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+
+      p {
+        margin-top: 5px;
+        font-size: 14px;
+        color: #000000;
+      }
+    }
+  }
+
+  /* Styling for react-slick dots */
+  .slick-dots {
+    li {
+      button:before {
+        color: #666;
+      }
+    }
+    li.slick-active {
+      button:before {
+        color: #007bff;
+      }
+    }
   }
 }

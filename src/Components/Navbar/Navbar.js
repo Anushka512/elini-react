@@ -61,7 +61,7 @@ const Navbar = () => {
                     <ul className="app__navbar-links">
                         <Link to={`/`}>Home</Link>
                         <Link to={`/about`}>About us</Link>
-                        <li>Ethnic Wear</li>
+                        <Link to={`/ethnicwear`}>Ethnic Wear</Link>
                         <li>New Arrivals</li>
                         <li>Store Locator</li>
                         <Link to={`/contactus`}>Reach Us</Link>
@@ -98,12 +98,11 @@ const Navbar = () => {
                                 <HiX onClick={() => setToggle(false)} />
                                 <ul className='mobile'>
                                     <Link to={`/`}>Home</Link>
-                                    <li>About us</li>
-                                    <li>Ethnic Wear</li>
+                                    <Link to={`/about`}>About us</Link>
+                                    <Link to={`/ethnicwear`}>Ethnic Wear</Link>
                                     <li>New Arrivals</li>
                                     <li>Store Locator</li>
-                                    <li>Reach Us</li>
-                                    
+                                    <Link to={`/contactus`}>Reach Us</Link>
                                 </ul>
                             </motion.div>
                         )}
