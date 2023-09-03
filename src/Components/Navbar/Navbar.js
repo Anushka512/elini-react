@@ -5,6 +5,7 @@ import {
     AiOutlineUser,
     AiOutlineSearch,
 } from "react-icons/ai";
+import { useDispatch, useSelector  } from "react-redux";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -12,10 +13,14 @@ import { HiMenuAlt4, HiX } from "react-icons/hi";
 import Logo from "../../Assets/Images/logo.png"
 import "./Navbar.scss";
 import { BsFacebook, BsInstagram, BsWhatsapp, BsTwitter } from "react-icons/bs";
+import { setCartOpen } from "../../Redux/slices/appConfigSlice";
+
 
 const Navbar = () => {
-
+    const dispatch = useDispatch();
     const [toggle, setToggle] = useState(false);
+    const { isCartOpen } = useSelector((state) => state.app);
+
     return (
         <div className="wrapper__nav ">
             <div className="top__nav nav-contain">
@@ -59,21 +64,24 @@ const Navbar = () => {
                         <img src={Logo} alt="Logo" />
                     </div>
                     <ul className="app__navbar-links">
+
                         <Link to={`/`}>Home</Link>
                         <Link to={`/about`}>About us</Link>
                         <Link to={`/ethnicwear`}>Ethnic Wear</Link>
                         <li>New Arrivals</li>
-                        <li>Store Locator</li>
+                        <Link to={`/storelocator`}>Store Locator</Link>
                         <Link to={`/contactus`}>Reach Us</Link>
 
                     </ul>
                     <div className="right">
                         <AiOutlineSearch />
                         <AiOutlineHeart />
-                        <AiOutlineUser />
-                        <AiOutlineShopping />
+                        <Link to={`/login`}><AiOutlineUser /></Link>
+                        <AiOutlineShopping
+                            onClick={() => dispatch(setCartOpen(true))} />
                     </div>
                 </div>
+
 
                 <div className="responsive__menu">
                     <AiOutlineSearch
@@ -85,6 +93,7 @@ const Navbar = () => {
                     <AiOutlineShopping
                         size={25}
                         style={{ marginRight: "10px" }}
+                        onClick={() => dispatch(setCartOpen(true))}
                     />
                     <AiOutlineUser size={25} style={{ marginRight: "35px" }} />
 
@@ -101,7 +110,7 @@ const Navbar = () => {
                                     <Link to={`/about`}>About us</Link>
                                     <Link to={`/ethnicwear`}>Ethnic Wear</Link>
                                     <li>New Arrivals</li>
-                                    <li>Store Locator</li>
+                                    <Link to={`/storelocator`}>Store Locator</Link>
                                     <Link to={`/contactus`}>Reach Us</Link>
                                 </ul>
                             </motion.div>

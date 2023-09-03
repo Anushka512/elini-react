@@ -9,6 +9,9 @@ import Footer from "./Components/Footer/Footer.js";
 import About from "./Pages/About/Aboutus";
 import ProudctCardPrice from "./Components/ProductCardPrice/ProductCardPrice.js";
 import Ethnic from "./Pages/EthnicWear/EthnicWear";
+import StoreLocator from "./Pages/StoreLocator/StoreLocator";
+import Login from "./Pages/Login/Login";
+import Signup from "./Pages/Signup/Signup";
 
 function App() {
   return (
@@ -17,11 +20,14 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/about" element={<About />} />
         <Route path="/ethnicwear" element={<Ethnic />} />
+        <Route path="/storelocator" element={<StoreLocator />} />
         <Route path="*" element={<ErrorPage />} />
-        <Route path="/contactus" element={<Contact/>} />
-        <Route path="/productcard" element={<ProudctCardPrice/>}/>
+        <Route path="/contactus" element={<Contact />} />
+        <Route path="/productcard" element={<ProudctCardPrice />} />
 
       </Routes>
 
