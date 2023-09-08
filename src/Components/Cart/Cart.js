@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { RxCross1 } from "react-icons/rx";
 import CartItem from "../CartItem/CartItem.js";
 import { useDispatch, useSelector } from "react-redux";
-
 import "./Cart.scss";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { setCartOpen } from "../../Redux/slices/appConfigSlice";
+
 
 function Cart() {
   const dispatch = useDispatch();
@@ -64,7 +64,7 @@ function Cart() {
     <>
       <div className={`Cart flex__center ${isCartOpen ? "active" : ""}`}>
         <div className="top__cart-section">
-          <h5>Welcome to Cart</h5>
+          <h5>Your Cart</h5>
           <RxCross1 onClick={() => dispatch(setCartOpen(false))} />
         </div>
 
@@ -109,3 +109,4 @@ function Cart() {
 }
 
 export default Cart;
+

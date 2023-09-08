@@ -1,4 +1,19 @@
 .pc-price {
+  position: relative;
+  .wishlist-icon {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      color: red;
+      transform: scale(1.2);
+    }
+  }
   .pc-price-img {
     img {
       display: block;

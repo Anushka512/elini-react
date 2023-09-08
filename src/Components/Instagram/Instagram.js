@@ -4,6 +4,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import "../ProductCardPrice/ProductCardPrice.scss";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
 
 const products = [
   {
@@ -67,14 +70,19 @@ function ProdcuctCardPrice() {
     <Slider {...settings}>
       {products.map(product => (
         <div key={product.id} className="pc-price">
-          <div className='pc-price-img'>
-            <img src={product.image} alt={product.name} />
+          <div className="wishlist-icon">
+            <FontAwesomeIcon icon={faHeart} />
           </div>
-          <div className='pc-price-footer'>
-            <p className='pc-price-name'>{product.name}</p>
-            <p className='pc-price-title'>{product.title}</p>
-            <p className='pc-price-price'>{product.shop}</p>
-          </div>
+          <Link to="/productdetails">
+            <div className='pc-price-img'>
+              <img src={product.image} alt={product.name} />
+            </div>
+            <div className='pc-price-footer'>
+              <p className='pc-price-name'>{product.name}</p>
+              <p className='pc-price-title'>{product.title}</p>
+              <p className='pc-price-price'>{product.shop}</p>
+            </div>
+          </Link>
         </div>
       ))}
     </Slider>

@@ -1,0 +1,45 @@
+.dashboard {
+  .productListContainer {
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #f4f3ef;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+
+    #productListHeading {
+      font: 400 2rem "Roboto";
+      box-sizing: border-box;
+      color: rgba(0, 0, 0, 0.637);
+      transition: all 0.5s;
+      text-align: center;
+    }
+    .gift-container {
+      padding: 30px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .gift-card-page {
+        text-align: center;
+        padding: 20px;
+
+        h1 {
+          font-size: 24px;
+        }
+
+        .gift-cards,
+        .coupons {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}

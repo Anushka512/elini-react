@@ -68,10 +68,10 @@ export default function Cards() {
                             color: '#FFFFFF',
                             backgroundColor: '#FFFFFF',
                             height: 2.5,
-                            width : 60,
-                            padding:1,
+                            width: 60,
+                            padding: 1,
                             border: faBorderNone,
-                           gap:10,
+                            gap: 10,
                         }}></hr> {product.description}</p>
                     </div>
                 ))}

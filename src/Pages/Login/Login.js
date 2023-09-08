@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Login.scss';
 import { Link } from "react-router-dom";
-import { BsGoogle, BsX } from "react-icons/bs";
+import { BsGoogle, BsX } from "react-icons/bs"; 
 
 const LoginDialog = () => {
   const [showCreateAccount, setShowCreateAccount] = useState(false);
@@ -15,12 +15,14 @@ const LoginDialog = () => {
     setIsDialogVisible(false);
   };
 
-
   return (
     isDialogVisible && (
       <div className="login-dialog">
         <div className="overlay">
-          <button className="close-btn" onClick={handleClose}><BsX /></button>
+
+          <button className="close-btn" onClick={handleClose}>
+            <BsX />
+          </button>
           <div className="sec-head login-header">
             <h2>LOGIN</h2>
             <button className="login-with-mail-btn"><BsGoogle />{"  "}Sign In with Google</button>
@@ -39,7 +41,7 @@ const LoginDialog = () => {
             </div>
           </div>
         </div>
-      </div >
+      </div>
     )
   );
 };

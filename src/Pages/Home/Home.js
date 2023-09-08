@@ -158,7 +158,7 @@ const Home = () => {
         <ShopInstagram />
       </section>
 
-      <div className=" detailsection  contain contain-bg">
+      <div className=" detailsection contain contain-bg">
         <div className="item">
           <img src={v1} alt="v1" />
           <h2>Free delivery</h2>

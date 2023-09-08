@@ -1,0 +1,295 @@
+.product-details-container {
+  display: flex;
+
+  .left-section {
+    flex: 1;
+    display: flex;
+
+    .vertical-images {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      overflow-x: auto;
+
+      img {
+        max-width: 30%;
+        height: auto;
+      }
+    }
+
+    .main-product-image {
+      margin-right: 100px;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .product-info {
+      h2 {
+        font-size: 24px;
+      }
+      p {
+        margin: 0px 0px 20px 0px;
+      }
+
+      .price {
+        margin: 0px 0px 20px 0px;
+        .mrp {
+          text-decoration: line-through;
+          margin-right: 15px;
+        }
+        .discounted-price {
+          color: #e74c3c;
+        }
+      }
+      .color-options {
+        margin: 0px 0px 20px 0px;
+        display: flex;
+        .color-swatch {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin-right: 10px;
+          cursor: pointer;
+          &.selected {
+            border: 2px solid #333;
+          }
+        }
+      }
+      .size-options {
+        margin: 0px 0px 20px 0px;
+        .size-button {
+          padding: 5px 10px;
+          margin-right: 10px;
+          border-radius: 20px;
+          border: 1px solid #333;
+          cursor: pointer;
+          &.selected {
+            background-color: #333;
+            color: rgb(255, 255, 255);
+          }
+        }
+      }
+      .quantity {
+        margin: 0px 0px 20px 0px;
+        display: flex;
+        
+        align-items: center;
+
+        .quant{
+          padding: 2px;
+          border-radius: 2px;
+          border: 2px solid #333;
+        }
+        
+        button {
+          font-size: larger;
+          font-weight: 600;
+          padding: 5px 10px;
+          cursor: pointer;
+          border: 0px solid #333;
+        }
+        span {
+          margin: 0 10px;
+          font-weight: bold;
+        }
+      }
+
+      .wishlist-icon {
+        margin-right: 40px;
+        font-size: 27px;
+        color: rgb(143, 143, 143);
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    
+        &:hover {
+          color: red;
+          transform: scale(1.2);
+        }
+      }
+
+      .cart-button {
+        margin: 0px 0px 20px 0px;
+        padding:10px 70px 10px 70px;
+        margin-top: 10px;
+        border-radius: 3px;
+        background-color: #212121; /* Blue color for buttons */
+        color: white;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          background-color: #000000; /* Darker blue color on hover */
+        }
+      }
+      .wishlist-button {
+        margin: 0px 20px 20px 0px;
+        padding:10px 70px 10px 70px;
+        margin-top: 10px;
+        border-radius: 3px;
+        background-color: #212121; /* Blue color for buttons */
+        color: white;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          background-color: #000000; /* Darker blue color on hover */
+        }
+      }
+      .coupon {
+        margin: 0px 0px 0px 30px;
+        padding:10px 70px 10px 70px;
+        margin-top: 10px;
+        border-radius: 3px 0px 0px 3px;
+        background-color: transparent; /* Blue color for buttons */
+        color: rgb(0, 0, 0);
+        border: 1px solid grey;
+        cursor: pointer;
+      }
+      .coupon1 {
+        margin: 0px 0px 0px 0px;
+        padding:10px 70px 10px 70px;
+        margin-top: 10px;
+        border-radius: 0px 3px 3px 0px;
+        background-color: #272727; /* Blue color for buttons */
+        color: rgb(255, 255, 255);
+        border: 1px solid grey;
+        cursor: pointer;
+        &:hover {
+          background-color: #000000; /* Darker blue color on hover */
+        }
+      }
+    }
+
+    .product-description-reviews {
+      h3 {
+        font-size: 20px;
+      }
+      p {
+        margin: 0px 20px 20px 0px;
+      }
+    }
+
+    .manufacturing-details {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      padding: 10px;
+      margin: 0px 20px 20px 0px;
+      cursor: pointer;
+      .arrow {
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      h3 {
+        margin: 0;
+        padding: 0;
+      }
+
+      p {
+        display: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      &.open {
+        p {
+          display: block;
+        }
+      }
+    }
+
+    .links {
+      a {
+        margin-top: 10px;
+        text-decoration: underline;
+        margin-right: 20px;
+        cursor: pointer;
+        &:hover {
+          color: #212121;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+// 4 support section
+
+.detailsection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-basis: 24%;
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+      flex-basis: 100%;
+    }
+
+    h3 {
+      padding: 10px;
+      font-family: "Montserrat";
+    }
+
+    p {
+      font-size: 13px;
+      color: #666;
+    }
+  }
+
+  .divider {
+    width: 2px;
+    height: 100px;
+    background-color: #ccc;
+    margin: 0 20px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+.product-wrapper {
+  padding: 40px;
+  .pr-wrapper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    // border-bottom: 1px solid black;
+  }
+  .pr-wrapper-btnbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 0px;
+    gap: 0px 20px;
+
+    .pr-btn {
+      cursor: pointer;
+      padding: 6px 15px;
+      border: 2px solid #333333;
+      border-radius: 30px;
+      color: #333333;
+      font-family: "Montserrat", sans-serif;
+    }
+    .pr-btn.active {
+      background-color: #000;
+      color: white;
+    }
+  }
+}

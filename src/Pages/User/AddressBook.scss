@@ -1,0 +1,101 @@
+.dashboard {
+  .productListContainer {
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #f4f3ef;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+
+    #productListHeading {
+      font: 400 2rem "Roboto";
+      box-sizing: border-box;
+      color: rgba(0, 0, 0, 0.637);
+      transition: all 0.5s;
+      text-align: center;
+    }
+
+    button {
+      background-color: #231918;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      padding: 10px 15px;
+    }
+
+    .add-address-dialog {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-top: 20px;
+      background-color: #f4f4f4;
+      position: relative; // Required for positioning the cross icon
+
+      .close-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: #777;
+        font-size: 18px;
+        transition: color 0.2s;
+
+        &:hover {
+          color: #333;
+        }
+      }
+
+      input {
+        margin-bottom: 10px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+    }
+
+    .address-list {
+      margin-top: 20px;
+
+      .address-item {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-bottom: 10px;
+
+        strong {
+          font-size: 18px;
+        }
+
+        p {
+          margin: 0;
+        }
+
+        .default-address {
+          color: #231918;
+          font-weight: bold;
+        }
+
+        .address-options {
+          button {
+            background-color: transparent;
+            color: #000000;
+            border: 1px solid rgb(39, 39, 39);
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 6px 10px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}

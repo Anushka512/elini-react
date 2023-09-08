@@ -10,27 +10,36 @@ import About from "./Pages/About/Aboutus";
 import ProudctCardPrice from "./Components/ProductCardPrice/ProductCardPrice.js";
 import Ethnic from "./Pages/EthnicWear/EthnicWear";
 import StoreLocator from "./Pages/StoreLocator/StoreLocator";
-import Login from "./Pages/Login/Login";
+import Shop from "./Pages/Shop Now/ShopNow.js";
 import Signup from "./Pages/Signup/Signup";
+import ProductDetails from "./Pages/ProductDetails/ProductDetails.js";
+import Admin from "./Pages/User/Dashboard.js";
+import Password from "./Pages/User/Password.js";
+import Pincodes from "./Pages/User/MyOrders.js";
+import Address from "./Pages/User/AddressBook.js";
+import HeaderOffer from "./Pages/User/GiftCardpage.js";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/shopnow" element={<Shop />} />
+        <Route path="/productdetails" element={<ProductDetails />} />
         <Route path="/about" element={<About />} />
         <Route path="/ethnicwear" element={<Ethnic />} />
         <Route path="/storelocator" element={<StoreLocator />} />
         <Route path="*" element={<ErrorPage />} />
         <Route path="/contactus" element={<Contact />} />
         <Route path="/productcard" element={<ProudctCardPrice />} />
-
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin/password" element={<Password />} />
+        <Route path="/admin/pincodes" element={<Pincodes />} />
+        <Route path="/admin/header" element={<HeaderOffer />} />
+        <Route path="/admin/address" element={<Address />} />
       </Routes>
-
       <Footer />
     </div>
   );
