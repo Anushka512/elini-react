@@ -8,6 +8,7 @@ import {
   faYoutube,
   faWhatsapp,
 } from '@fortawesome/free-brands-svg-icons';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -28,12 +29,12 @@ const Footer = () => {
           <p>Return Policy</p>
           <p>Fashion Awards</p>
           <p>Delivery Policy</p>
-          <p>Contact Us</p>
+          <p><Link to={`/contactus`}>Reach Us</Link></p>
           <p>Careers</p>
           <p>Sitemap</p>
-          <p>Store Locator</p>
+          <p><Link to={`/storelocator`}>Store Locator</Link></p>
           <p>Investor Relations</p>
-          <p>Blog</p>
+          <p><Link to={`/blog`}>Blog</Link></p>
         </ul>
       </div>
 

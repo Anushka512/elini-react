@@ -1,5 +1,7 @@
 .storelocator {
-  //   min-height: 100vh;
+  background-color: #f4f3ef;
+  min-height: 100vh;
+
   .banner {
     .hero__container {
       display: flex;
@@ -13,25 +15,64 @@
       }
     }
   }
-  .store-locator-container {
+  .app {
     display: flex;
+    min-height: 100vh;
+
+    .left-panel {
+      flex: 1;
+      padding: 20px;
+      background-color: #f4f3ef;
+
+      .top-bar {
+        margin-top: 20px;
+
+        .search-bar {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          max-width: 1200px;
+        }
+      }
+      .store-section {
+        display: flex;
+        flex-direction: column;
+
+        .store-info {
+          width: 100%;
+          max-width: 500px;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .right-panel {
+      flex: 2;
+      position: relative;
+    }
   }
 
-  .search-bar {
-    // Search bar styles
-  }
+  @media (max-width: 768px) {
+    .app {
+      flex-direction: column;
 
-  .store-details {
-    width: 300px; // Adjust as needed
-    padding: 20px;
-  }
+      .left-panel {
+        padding: 10px; // Adjust padding for smaller screens
 
-  .store-accordion {
-    // Accordion styles
-  }
+        .top-bar {
+          margin-top: 10px; // Adjust margin for smaller screens
+        }
 
-  .map-container {
-    flex: 1;
-    // Map container styles
+        .store-section {
+          .store-info {
+            max-width: 100%; // Make store info full width on smaller screens
+          }
+        }
+      }
+
+      .right-panel {
+        flex: 1; // Adjust flex for smaller screens
+      }
+    }
   }
 }

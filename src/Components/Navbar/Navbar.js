@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import Logo from "../../Assets/Images/logo.png"
 import Cart from '../Cart/Cart';
-import LoginDialog from '../../Pages/Login/Login';
+// import LoginDialog from '../../Pages/Login/Login';
 import "./Navbar.scss";
 import { BsFacebook, BsInstagram, BsWhatsapp, BsTwitter } from "react-icons/bs";
 import { setCartOpen } from "../../Redux/slices/appConfigSlice";
@@ -21,7 +21,7 @@ import WishlistDialog from "../Wishlist/Wishlist";
 const Navbar = () => {
     const dispatch = useDispatch();
     const [toggle, setToggle] = useState(false);
-    const [showLoginDialog, setShowLoginDialog] = useState(false);
+    // const [showLoginDialog, setShowLoginDialog] = useState(false);
     const [showWishlistDialog, setShowWishlistDialog] = useState(false);
     const { isCartOpen } = useSelector((state) => state.app);
     const { carts } = useSelector((state) => state.products);
@@ -34,10 +34,9 @@ const Navbar = () => {
         dispatch(setCartOpen(true));
     };
 
-    const openLoginDialog = () => {
-        setShowLoginDialog(true);
-    };
-
+    // const openLoginDialog = () => {
+    //     setShowLoginDialog(true);
+    // };
 
     return (
         <div className="wrapper__nav ">
@@ -94,9 +93,12 @@ const Navbar = () => {
                     <div className="right">
                         <AiOutlineSearch />
                         <AiOutlineHeart onClick={openWishlistDialog} />
-                        <AiOutlineUser onClick={openLoginDialog} />
+                        {/* onClick={openLoginDialog} */}
+                        <Link to={`/login`}>
+                            <AiOutlineUser />
+                        </Link>
                         <AiOutlineShopping onClick={openCartDialog} />
-                    </div>
+                    </div>  
                 </div>
 
                 <div className="responsive__menu">
@@ -143,7 +145,8 @@ const Navbar = () => {
                 <WishlistDialog open={showWishlistDialog} onClose={() => setShowWishlistDialog(false)} />
             )}
 
-            {showLoginDialog && <LoginDialog />}
+            {/* {showLoginDialog && <LoginDialog />} */}
+
         </div>
     )
 }

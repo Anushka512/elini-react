@@ -13,11 +13,14 @@ import StoreLocator from "./Pages/StoreLocator/StoreLocator";
 import Shop from "./Pages/Shop Now/ShopNow.js";
 import Signup from "./Pages/Signup/Signup";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails.js";
-import Admin from "./Pages/User/Dashboard.js";
+import User from "./Pages/User/Dashboard.js";
 import Password from "./Pages/User/Password.js";
 import Pincodes from "./Pages/User/MyOrders.js";
 import Address from "./Pages/User/AddressBook.js";
-import HeaderOffer from "./Pages/User/GiftCardpage.js";
+import Gifts from "./Pages/User/GiftCardpage.js";
+import Checkout from "./Pages/Checkout/CheckoutPage.js";
+import Login from "./Pages/Login/Login.js";
+import Blog from "./Pages/Blog/Blog";
 
 function App() {
   return (
@@ -26,6 +29,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/shopnow" element={<Shop />} />
         <Route path="/productdetails" element={<ProductDetails />} />
         <Route path="/about" element={<About />} />
@@ -34,11 +38,13 @@ function App() {
         <Route path="*" element={<ErrorPage />} />
         <Route path="/contactus" element={<Contact />} />
         <Route path="/productcard" element={<ProudctCardPrice />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/admin/password" element={<Password />} />
-        <Route path="/admin/pincodes" element={<Pincodes />} />
-        <Route path="/admin/header" element={<HeaderOffer />} />
-        <Route path="/admin/address" element={<Address />} />
+        <Route path="/user" element={<User />} />
+        <Route path="/user/password" element={<Password />} />
+        <Route path="/user/orders" element={<Pincodes />} />
+        <Route path="/user/giftcards" element={<Gifts />} />
+        <Route path="/user/address" element={<Address />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
       <Footer />
     </div>

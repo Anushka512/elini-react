@@ -36,7 +36,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <ul>
-        <Link to="/admin" style={{ color: "white" }}>
+        <Link to="/user" style={{ color: "white" }}>
           <li className="option active">
             <span>
               {" "}
@@ -46,7 +46,7 @@ const Sidebar = () => {
           </li>
         </Link>
 
-        <Link to="/admin/password" style={{ color: "white" }}>
+        <Link to="/user/password" style={{ color: "white" }}>
           <li>
             <span>
               <FontAwesomeIcon icon={faListAlt} />
@@ -55,7 +55,7 @@ const Sidebar = () => {
           </li>
         </Link>
 
-        <Link to="/admin/address" style={{ color: "white" }}>
+        <Link to="/user/address" style={{ color: "white" }}>
           <li>
             <span>
               <FontAwesomeIcon icon={faAddressBook} />
@@ -64,7 +64,7 @@ const Sidebar = () => {
           </li>
         </Link>
 
-        <Link to="/admin/pincodes" style={{ color: "white" }}>
+        <Link to="/user/orders" style={{ color: "white" }}>
           <li>
             <span>
               <FontAwesomeIcon icon={faShoppingCart} />
@@ -73,7 +73,7 @@ const Sidebar = () => {
           </li>
         </Link>
 
-        <Link to="/admin/header" style={{ color: "white" }}>
+        <Link to="/user/giftcards" style={{ color: "white" }}>
           <li className="option">
             <span>
               <FontAwesomeIcon icon={faGifts} />

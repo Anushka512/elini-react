@@ -6,14 +6,14 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 const SearchBar = ({ searchQuery, setSearchQuery }) => {
   return (
     <><span className="search-icon">
-    <FontAwesomeIcon icon={faSearch} />
-  </span>
-    <input
-      type="text"
-      placeholder="Search products..."
-      value={searchQuery}
-      onChange={(e) => setSearchQuery(e.target.value)}
-    />
+      <FontAwesomeIcon icon={faSearch} />
+    </span>
+      <input
+        type="text"
+        placeholder="Search..."
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />
     </>
   );
 };

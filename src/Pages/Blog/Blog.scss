@@ -1,0 +1,114 @@
+.blog-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-section {
+  width: 70%;
+
+  .blog-title {
+    font-family: "Crimson Pro", serif;
+    font-weight: 400;
+    color: var(--black-head);
+    margin-bottom: 5px;
+    font-size: 38px;
+  }
+
+  .blog-date {
+    font-size: 14px;
+    color: #999;
+  }
+
+  .blog-image {
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .divider {
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+  }
+
+  .author-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    .author-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .author-details {
+      .author-name {
+        font-size: 17px;
+        color: red;
+      }
+    }
+  }
+}
+
+.divider-main {
+  border-left: 1px solid #ccc;
+  margin: 0px 40px 0px 50px;
+}
+
+.right-section {
+  width: 30%;
+
+  .trending-heading {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .like-heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .trending-image,
+  .like-image {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+
+  .like-item {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .like-details {
+    margin-left: 10px;
+  }
+
+  .like-description {
+    font-size: 16px;
+  }
+
+  .like-date {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+  }
+
+  .categories-heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .categories-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .category-item {
+    font-size: 16px;
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+  }
+}

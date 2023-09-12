@@ -1,4 +1,12 @@
 .dashboard {
+  width: 100vw;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  position: absolute;
+  background-color: #f4f3ef;
+  height: 130vh;
+
   .productListContainer {
     justify-content: center;
     align-items: center;
@@ -19,6 +27,7 @@
       padding: 30px;
       display: flex;
       flex-wrap: wrap;
+      height: 70vh;
 
       .gift-card-page {
         text-align: center;

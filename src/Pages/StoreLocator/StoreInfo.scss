@@ -1,0 +1,67 @@
+.store-info {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+
+  &.open {
+    max-height: 290px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: transparent;
+    cursor: pointer;
+
+    .store-place {
+      font-weight: bold;
+    }
+
+    .toggle-button {
+      font-size: 1.5rem;
+    }
+  }
+
+  .details {
+    padding: 10px;
+
+    .store-name {
+      font-weight: 600;
+      color: rgb(144, 0, 0);
+    }
+
+    .store-timings {
+      font-style: italic;
+    }
+
+    .direction {
+      display: flex;
+      justify-content: space-between;
+
+      .store-email {
+        margin-top: 5px;
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+      }
+
+      .get-directions-button {
+        padding: 7px 12px;
+        background-color: transparent;
+        color: black;
+        border: 1px solid black;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+          background-color: #251c1c;
+          color: white;
+        }
+      }
+    }
+  }
+}

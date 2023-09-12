@@ -17,13 +17,13 @@ function HeaderOffer() {
               <h2>Gift Cards</h2>
               <GiftCard />
               <GiftCard />
-              {/* Add more GiftCard components as needed */}
+              <GiftCard />
             </div>
             <div className="coupons">
               <h2>Coupons</h2>
               <Coupon />
               <Coupon />
-              {/* Add more Coupon components as needed */}
+              <Coupon />
             </div>
           </div>
         </div>
