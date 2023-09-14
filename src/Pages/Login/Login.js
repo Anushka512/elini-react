@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Login.scss';
 import { Link } from "react-router-dom";
-import { BsGoogle, BsX } from "react-icons/bs";
+import { BsGoogle, BsX } from "react-icons/bs"; 
 
 const LoginDialog = ({ onClose }) => {
   // const [showCreateAccount, setShowCreateAccount] = useState(false);
@@ -15,18 +15,29 @@ const LoginDialog = ({ onClose }) => {
   }
   const handleClose = () => {
     setIsDialogVisible(false);
+<<<<<<< Updated upstream
   }
+=======
+  };
+>>>>>>> Stashed changes
 
   return (
     isDialogVisible && (
       <div className="login-dialog">
         <div className="overlay">
+<<<<<<< Updated upstream
           <Link to={`/`}>
             <button className="close-btn" onClick={handleClose}>
               <BsX />
             </button>
           </Link>
 
+=======
+
+          <button className="close-btn" onClick={handleClose}>
+            <BsX />
+          </button>
+>>>>>>> Stashed changes
           <div className="sec-head login-header">
             <h2>LOGIN</h2>
             <button className="login-with-mail-btn"><BsGoogle />{"  "}Sign In with Google</button>

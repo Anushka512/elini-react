@@ -2,18 +2,20 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { axiosClient } from "../../utils/axios/axios";
 import { setLoading } from "./appConfigSlice";
 
-//Get All Orders
+//Get All Categories
 export const getCategories = createAsyncThunk(
   "/api/v1/admin/categories",
   async (_, thunkAPI) => {
     try {
+      thunkAPI.dispatch(setLoading(true));
       const response = await axiosClient.get("/api/v1/categories");
+      console.log(response);
       return response.data;
     } catch (e) {
       return Promise.reject(e);
     }
   }
-);
+); 
 //Create New Category
 export const createNewCategory = createAsyncThunk(
   "/api/v1/add-cat",
@@ -31,7 +33,7 @@ export const createNewCategory = createAsyncThunk(
     }
   }
 );
-//Create New Category
+//Delete Category
 export const deleteCategory = createAsyncThunk(
   "/api/v1/category/:id",
   async (body, thunkAPI) => {

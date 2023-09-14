@@ -17,13 +17,21 @@ function HeaderOffer() {
               <h2>Gift Cards</h2>
               <GiftCard />
               <GiftCard />
+<<<<<<< Updated upstream
               <GiftCard />
+=======
+              {/* Add more GiftCard components as needed */}
+>>>>>>> Stashed changes
             </div>
             <div className="coupons">
               <h2>Coupons</h2>
               <Coupon />
               <Coupon />
+<<<<<<< Updated upstream
               <Coupon />
+=======
+              {/* Add more Coupon components as needed */}
+>>>>>>> Stashed changes
             </div>
           </div>
         </div>

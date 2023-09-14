@@ -50,6 +50,7 @@ export const getAdminProducts = createAsyncThunk(
     try {
       thunkAPI.dispatch(setLoading(true));
       const response = await axiosClient.get("/api/v1/admin/products");
+      console.log(response);
       return response.data;
     } catch (e) {
       console.log(e);
@@ -286,8 +287,8 @@ const productSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getAllProducts.fulfilled, (state, action) => {
-        if (action.payload.statusCode === 200) {
-          state.products = action.payload.result.products;
+        if (action.payload.statusCode == 200) {
+          state.products = action.payload.result;
         }
       })
       .addCase(createProduct.fulfilled, (state, action) => {

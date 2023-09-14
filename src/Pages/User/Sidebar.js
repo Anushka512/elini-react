@@ -36,7 +36,11 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <ul>
+<<<<<<< Updated upstream
         <Link to="/user" style={{ color: "white" }}>
+=======
+        <Link to="/admin" style={{ color: "white" }}>
+>>>>>>> Stashed changes
           <li className="option active">
             <span>
               {" "}
@@ -46,7 +50,11 @@ const Sidebar = () => {
           </li>
         </Link>
 
+<<<<<<< Updated upstream
         <Link to="/user/password" style={{ color: "white" }}>
+=======
+        <Link to="/admin/password" style={{ color: "white" }}>
+>>>>>>> Stashed changes
           <li>
             <span>
               <FontAwesomeIcon icon={faListAlt} />
@@ -55,7 +63,11 @@ const Sidebar = () => {
           </li>
         </Link>
 
+<<<<<<< Updated upstream
         <Link to="/user/address" style={{ color: "white" }}>
+=======
+        <Link to="/admin/address" style={{ color: "white" }}>
+>>>>>>> Stashed changes
           <li>
             <span>
               <FontAwesomeIcon icon={faAddressBook} />
@@ -64,7 +76,11 @@ const Sidebar = () => {
           </li>
         </Link>
 
+<<<<<<< Updated upstream
         <Link to="/user/orders" style={{ color: "white" }}>
+=======
+        <Link to="/admin/pincodes" style={{ color: "white" }}>
+>>>>>>> Stashed changes
           <li>
             <span>
               <FontAwesomeIcon icon={faShoppingCart} />
@@ -73,7 +89,11 @@ const Sidebar = () => {
           </li>
         </Link>
 
+<<<<<<< Updated upstream
         <Link to="/user/giftcards" style={{ color: "white" }}>
+=======
+        <Link to="/admin/header" style={{ color: "white" }}>
+>>>>>>> Stashed changes
           <li className="option">
             <span>
               <FontAwesomeIcon icon={faGifts} />
