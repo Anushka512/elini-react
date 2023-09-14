@@ -1,6 +1,5 @@
 /* crimsom pro font  */
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap");
 
 * {
   margin: 0px;
@@ -10,16 +9,16 @@
   /* font-family: 'Montserrat', sans-serif; */
 }
 
-:root{
-  --pr-black: #423F3F;
-  --black-head : #1e1e1e;
+:root {
+  --pr-black: #423f3f;
+  --black-head: #1e1e1e;
   --fade-yl: #f4f3ef;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -33,54 +32,73 @@ a {
   cursor: pointer;
 }
 
-a:hover{
+a:hover {
   font-weight: 500;
   color: #4d1f00;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.contain{
+.contain {
   padding: 70px 50px;
 }
-.nav-contain{
+.nav-contain {
   padding: 0px 50px;
 }
-.contain-bg{
+.contain-bg {
   background: var(--fade-yl);
 }
 
 /* headings  */
-.sec-head{
+.sec-head {
   font-size: 48px;
-  font-family: 'Crimson Pro', serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 400;
   text-align: center;
   color: var(--black-head);
   margin-bottom: 5px;
 }
-.sec-head-ul{
+.sec-head-ul {
   position: relative;
   margin-bottom: 15px;
 }
-.sec-head-ul:after{
+.sec-head-ul:after {
   content: "";
   position: absolute;
   bottom: -7px;
   left: 50%;
   height: 3px;
   width: 50px;
-  transform: translate(-50% , 0);
+  transform: translate(-50%, 0);
   background-color: var(--pr-black);
-
 }
 
-.sec-para{
+.sec-para {
   font-size: 16px;
   color: var(--pr-black);
-  font-family: 'Montserrat', sans-serif; 
+  font-family: "Montserrat", sans-serif;
   line-height: 24px;
+}
+
+.head-blog {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--black-head);
+  font-family: "Montserrat";
+}
+
+.heading-blog {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--black-head);
+  font-family: "Montserrat";
+  background-color: white;
+  border: 1.5px solid rgb(119, 119, 119);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

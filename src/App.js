@@ -21,6 +21,10 @@ import Gifts from "./Pages/User/GiftCardpage.js";
 import Checkout from "./Pages/Checkout/CheckoutPage.js";
 import Login from "./Pages/Login/Login.js";
 import Blog from "./Pages/Blog/Blog";
+import Sitemap from "./Pages/SiteMap/Sitemap";
+import FAQ from "./Pages/FAQ/Faq";
+import Privacy from "./Pages/Privacy/Privacy";
+import TD from "./Pages/Terms/Terms.js";
 
 function App() {
   return (
@@ -45,6 +49,10 @@ function App() {
         <Route path="/user/address" element={<Address />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/sitemap" element={<Sitemap />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/privacypolicy" element={<Privacy />} />
+        <Route path="/terms&conditions" element={<TD />} />
       </Routes>
       <Footer />
     </div>

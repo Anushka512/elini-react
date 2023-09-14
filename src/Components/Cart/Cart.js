@@ -21,7 +21,7 @@ function Cart() {
       return total + (item.quantity || 1) * item.price;
     }, 0);
   };
-
+  
   // CLOSE CART
   useEffect(() => {
     const handleOutsideClick = (event) => {

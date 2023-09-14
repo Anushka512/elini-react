@@ -12,31 +12,34 @@ import { motion } from "framer-motion";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import Logo from "../../Assets/Images/logo.png"
 import Cart from '../Cart/Cart';
-// import LoginDialog from '../../Pages/Login/Login';
+
 import "./Navbar.scss";
 import { BsFacebook, BsInstagram, BsWhatsapp, BsTwitter } from "react-icons/bs";
 import { setCartOpen } from "../../Redux/slices/appConfigSlice";
-import WishlistDialog from "../Wishlist/Wishlist";
+import { setWishOpen } from "../../Redux/slices/appConfigSlice";
+import Wish from "../Wishlist/Wishlist";
 
 const Navbar = () => {
     const dispatch = useDispatch();
     const [toggle, setToggle] = useState(false);
-    // const [showLoginDialog, setShowLoginDialog] = useState(false);
-    const [showWishlistDialog, setShowWishlistDialog] = useState(false);
-    const { isCartOpen } = useSelector((state) => state.app);
+
+
+    const { isCartOpen } = useSelector((state) => state.app); const { isWishOpen } = useSelector((state) => state.app);
+
     const { carts } = useSelector((state) => state.products);
 
-    const openWishlistDialog = () => {
-        setShowWishlistDialog(true);
+
+
+
+    const openWishDialog = () => {
+        dispatch(setWishOpen(true));
     };
 
     const openCartDialog = () => {
         dispatch(setCartOpen(true));
     };
 
-    // const openLoginDialog = () => {
-    //     setShowLoginDialog(true);
-    // };
+
 
     return (
         <div className="wrapper__nav ">
@@ -92,13 +95,13 @@ const Navbar = () => {
                     </ul>
                     <div className="right">
                         <AiOutlineSearch />
-                        <AiOutlineHeart onClick={openWishlistDialog} />
+                        <AiOutlineHeart onClick={openWishDialog} />
                         {/* onClick={openLoginDialog} */}
                         <Link to={`/login`}>
                             <AiOutlineUser />
                         </Link>
                         <AiOutlineShopping onClick={openCartDialog} />
-                    </div>  
+                    </div>
                 </div>
 
                 <div className="responsive__menu">
@@ -108,7 +111,7 @@ const Navbar = () => {
                     <AiOutlineHeart
                         size={25}
                         style={{ marginRight: "10px" }}
-                        onClick={openWishlistDialog}
+                        onClick={openWishDialog}
                     />
                     <AiOutlineShopping
                         size={25}
@@ -140,10 +143,9 @@ const Navbar = () => {
             </nav>
 
             {isCartOpen && <Cart carts={carts} />}
+            {isWishOpen && <Wish carts={carts} />}
 
-            {showWishlistDialog && (
-                <WishlistDialog open={showWishlistDialog} onClose={() => setShowWishlistDialog(false)} />
-            )}
+
 
             {/* {showLoginDialog && <LoginDialog />} */}
 

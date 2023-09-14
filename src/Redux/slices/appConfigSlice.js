@@ -6,6 +6,7 @@ const appConfigSlice = createSlice({
     isLoading: false,
     isCartOpen: false,
     closeNavBar: true,
+    isWishOpen: false,
   },
   reducers: {
     setLoading: (state, action) => {
@@ -13,6 +14,9 @@ const appConfigSlice = createSlice({
     },
     setCartOpen: (state, action) => {
       state.isCartOpen = action.payload;
+    },
+    setWishOpen: (state, action) => {
+      state.isWishOpen = action.payload;
     },
     setNavbar: (state, action) => {
       state.closeNavBar = action.payload;
@@ -22,4 +26,4 @@ const appConfigSlice = createSlice({
 
 export default appConfigSlice.reducer;
 
-export const { setLoading, setCartOpen, setNavbar } = appConfigSlice.actions;
+export const { setLoading, setCartOpen,setWishOpen, setNavbar  } = appConfigSlice.actions;

@@ -22,19 +22,16 @@ const Footer = () => {
       </div>
       <div className="footer-line">
         <ul>
-          <p>Support</p>
-          <p>Company</p>
-          <p>Refund policy</p>
-          <p>Privacy Policy</p>
-          <p>Return Policy</p>
-          <p>Fashion Awards</p>
-          <p>Delivery Policy</p>
           <p><Link to={`/contactus`}>Reach Us</Link></p>
-          <p>Careers</p>
-          <p>Sitemap</p>
-          <p><Link to={`/storelocator`}>Store Locator</Link></p>
-          <p>Investor Relations</p>
           <p><Link to={`/blog`}>Blog</Link></p>
+          <p><Link to={`/sitemap`}>Sitemap</Link></p>
+          <p><Link to={`/storelocator`}>Store Locator</Link></p>
+          <p><Link to={`/FAQ`}>FAQ</Link></p>
+          <p>Refund policy</p>
+          <p><Link to={`/privacypolicy`}>Privacy Policy</Link></p>
+          <p>Return Policy</p>
+          <p>Delivery Policy</p>
+          <p><Link to={`/terms&conditions`}>Terms and Conditions</Link></p>
         </ul>
       </div>
 

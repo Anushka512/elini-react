@@ -1,4 +1,4 @@
-.wishlist-dialog {
+.Cart {
   width: 380px;
   position: fixed;
   top: 0;
@@ -40,12 +40,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    .btn_sm {
-      padding: 8px 4px;
-      border-radius: 1px;
-      font-size: 10px;
-    }
 
     p {
       font-size: 0.8rem;
